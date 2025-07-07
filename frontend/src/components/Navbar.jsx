@@ -1,4 +1,4 @@
-import React, {  useEffect, useRef, useState} from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FiMenu, FiUser, FiX } from 'react-icons/fi';
 import { navbarStyles } from '../assets/dummyStyles';
@@ -10,7 +10,7 @@ import { FaOpencart } from 'react-icons/fa';
 const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { cartCount } = useCart(); 
+  const { cartCount } = useCart();
 
   const [scrolled, setScrolled] = useState(false);
   const [activeTab, setActiveTab] = useState(location.pathname);
@@ -60,14 +60,14 @@ const Navbar = () => {
   //Close mobile menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
-   if (isOpen && mobileMenuRef.current && !mobileMenuRef.current.contains(event.target)) {
+      if (isOpen && mobileMenuRef.current && !mobileMenuRef.current.contains(event.target)) {
         setIsOpen(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
-    };    
+    };
   }, [isOpen]);
 
   //define logout function
@@ -81,9 +81,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${navbarStyles.nav} ${
-        scrolled ? navbarStyles.scrolledNav : navbarStyles.unscrolledNav
-      }`}
+      className={`${navbarStyles.nav} ${scrolled ? navbarStyles.scrolledNav : navbarStyles.unscrolledNav
+        }`}
     >
       <div className={navbarStyles.borderGradient} />
 
@@ -108,9 +107,8 @@ const Navbar = () => {
             <img
               src={logo}
               alt="SabziWala Logo"
-              className={`${navbarStyles.logoImage} ${
-                scrolled ? 'h-10 w-10' : 'h-12 w-12'
-              }`}
+              className={`${navbarStyles.logoImage} ${scrolled ? 'h-10 w-10' : 'h-12 w-12'
+                }`}
             />
             <span className={navbarStyles.logoText}>SabziWala</span>
           </Link>
@@ -121,29 +119,26 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`${navbarStyles.navItem} ${
-                  activeTab === item.path
+                className={`${navbarStyles.navItem} ${activeTab === item.path
                     ? navbarStyles.activeNavItem
                     : navbarStyles.inactiveNavItem
-                }`}
+                  }`}
               >
                 <div className="flex items-center">
                   <span
-                    className={`${navbarStyles.navIcon} ${
-                      activeTab === item.path
+                    className={`${navbarStyles.navIcon} ${activeTab === item.path
                         ? navbarStyles.activeNavIcon
                         : navbarStyles.inactiveNavIcon
-                    }`}
+                      }`}
                   >
                     {item.icon}
                   </span>
                   <span>{item.name}</span>
                   <div
-                    className={`${navbarStyles.navIndicator} ${
-                      activeTab === item.path
-                        ? navbarStyles.activeNavIndicator
-                        : navbarStyles.inactiveNavIndicator
-                    }`}
+                    className={`${navbarStyles.navIndicator} ${activeTab === item.path
+                        ? navbarStyles.activeIndicator
+                        : navbarStyles.inactiveIndicator
+                      }`}
                   ></div>
                 </div>
               </Link>
@@ -172,7 +167,7 @@ const Navbar = () => {
               </Link>
             )}
             <Link to='/cart' className={navbarStyles.cartLink} aria-label="Cart">
-              <FaOpencart className= {`${navbarStyles.cartIcon} ${cartBounce ? 'animate-bounce' : ''}`} />
+              <FaOpencart className={`${navbarStyles.cartIcon} ${cartBounce ? 'animate-bounce' : ''}`} />
               {cartCount > 0 && (
                 <span className={navbarStyles.cartBadge}>{cartCount}</span>
               )}
@@ -180,75 +175,77 @@ const Navbar = () => {
 
             <button onClick={() => setIsOpen(!isOpen)}
               className={navbarStyles.hamburgerButton}
-              aria-label={ isOpen ? "Close Menu" : "Open Menu"}>
-              { isOpen ? (
-                <FiX className= 'h-6 w-6 text-white' />
+              aria-label={isOpen ? "Close Menu" : "Open Menu"}>
+              {isOpen ? (
+                <FiX className='h-6 w-6 text-white' />
               ) : (
                 <FiMenu className='h-6 w-6 text-white' />
               )
               }
-              </button>
+            </button>
           </div>
         </div>
         {/*  Mobile Menu Overlay */}
         <div className={`${navbarStyles.mobileOverlay} ${isOpen ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'} 
-          fixed inset-0 bg-black bg-opacity-50 transition-opacity duration-300`} 
+          fixed inset-0 bg-black bg-opacity-50 transition-opacity duration-300`}
           onClick={() => setIsOpen(false)}>
-            <div className={`${navbarStyles.mobilePanel} ${isOpen ? 'translate-x-0' : '-translate-x-full'} 
-            fixed right-0 top-0 bottom-0 z-50 w-4/5 max-w-sm`} 
+          <div className={`${navbarStyles.mobilePanel} ${isOpen ? 'translate-x-0' : '-translate-x-full'} 
+            fixed right-0 top-0 bottom-0 z-50 w-4/5 max-w-sm`}
             onClick={(e) => e.stopPropagation()}
             ref={mobileMenuRef}>
-              <div className={navbarStyles.mobileHeader}>
+            <div className={navbarStyles.mobileHeader}>
+              <div className={navbarStyles.mobileLogo}>
                 <div className={navbarStyles.mobileLogo}>
-                  <div className={navbarStyles.mobileLogo}>
-                    <img src={logo} alt="SabziWala Logo" className={navbarStyles.mobileLogoImage} />
-                    <span className={navbarStyles.mobileLogoText}>SabziWala</span>
-                  </div>
+                  <img src={logo} alt="SabziWala Logo" className={navbarStyles.mobileLogoImage} />
+                  <span className={navbarStyles.mobileLogoText}>SabziWala</span>
                 </div>
-                <button onClick ={() => setIsOpen(false)}
-                  className={navbarStyles.closeButton}
-                  aria-label="Close Menu">
-                  <FiX className='h-6 w-6 text-white' />
-                </button>
               </div>
+              <button onClick={() => setIsOpen(false)}
+                className={navbarStyles.closeButton}
+                aria-label="Close Menu">
+                <FiX className='h-6 w-6 text-white' />
+              </button>
+            </div>
 
-              <div className={navbarStyles.mobileItemsContainer}>
-                {navItems.map((item, idx) => (
-                  <Link key={item.name} to={item.path} className={navbarStyles.mobileItem} style={{ transitionDelay: isOpen ? `${idx * 100}ms` : `0ms`, opacity: isOpen ? 1 : 0, transform: `translateX(${isOpen ? 0 : '20px'})`,
-                   }}
-                   onClick={() => { setIsOpen(false)
-                   }}>
+            <div className={navbarStyles.mobileItemsContainer}>
+              {navItems.map((item, idx) => (
+                <Link key={item.name} to={item.path} className={navbarStyles.mobileItem} style={{
+                  transitionDelay: isOpen ? `${idx * 100}ms` : `0ms`, opacity: isOpen ? 1 : 0, transform: `translateX(${isOpen ? 0 : '20px'})`,
+                }}
+                  onClick={() => {
+                    setIsOpen(false)
+                  }}>
                   <span className={navbarStyles.mobileItemIcon}>{item.icon}</span>
                   <span className={navbarStyles.mobileItemText}>{item.name}</span>
-                  </Link>
-                ))}
+                </Link>
+              ))}
 
-                <div className={navbarStyles.mobileButtons}>
-                  {isLoggedIn ? (
-                    <button
-                      onClick={() => {
-                        handleLogout();
+              <div className={navbarStyles.mobileButtons}>
+                {isLoggedIn ? (
+                  <button
+                    onClick={() => {
+                      handleLogout();
                       setIsOpen(false);
-                      }}
-                      className={navbarStyles.loginButton}
-                      aria-label="Logout"
-                    >
-                      <FiUser className={navbarStyles.loginButtonIcon} />
-                     Logout
-                    </button>
-                  ) : (
-                    <Link
-                      to="/login"
-                      className={navbarStyles.loginButton}
-                      aria-label="Login"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <FiUser className={navbarStyles.loginButtonIcon} />
-                      Login
-                    </Link>
-                  )}
-                </div>
+                    }}
+                    className={navbarStyles.loginButton}
+                    aria-label="Logout"
+                  >
+                    <FiUser className={navbarStyles.loginButtonIcon} />
+                    Logout
+                  </button>
+                ) : (
+                  <Link
+                    to="/login"
+                    className={navbarStyles.loginButton}
+                    aria-label="Login"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <FiUser className={navbarStyles.loginButtonIcon} />
+                    Login
+                  </Link>
+                )}
               </div>
+            </div>
           </div>
         </div>
       </div>
