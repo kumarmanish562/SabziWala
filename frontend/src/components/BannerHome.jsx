@@ -1,14 +1,17 @@
-import React, {  useState } from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { bannerStyles } from '../assets/dummyStyles'
 import { FiSearch, FiTruck } from 'react-icons/fi'
+import { features } from '../assets/Dummy'
+import BannerFood from '../assets/FoodBanner.png'
+
 
 const BannerHome = ({ onSearch }) => {
 
   const [searchTerm, setSearchTerm] = useState('')
   const navigate = useNavigate()
 
-  const handleSearch = (e) =>  setSearchTerm(e.target.value)
+  const handleSearch = (e) => setSearchTerm(e.target.value)
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -56,18 +59,39 @@ const BannerHome = ({ onSearch }) => {
               Delivered to Your Door
             </h1>
             <p className={bannerStyles.paragraph}>
-              Discover the freshest produce, top-quality meats, and pantry essentials 
+              Discover the freshest produce, top-quality meats, and pantry essentials
               delivered within 30 minutes.
             </p>
-            <form onSubmit= {handleSubmit} className={bannerStyles.form}>
-              <input type="text" value= {searchTerm} onChange={handleSearch} 
-              placeholder='Search for fruits, vegetables, and more....'
-               className={bannerStyles.input} />
+            <form onSubmit={handleSubmit} className={bannerStyles.form}>
+              <input type="text" value={searchTerm} onChange={handleSearch}
+                placeholder='Search for fruits, vegetables, and more....'
+                className={bannerStyles.input} />
 
               <button type="submit" className={bannerStyles.searchButton}>
                 <FiSearch className='h-4 w-4 sm:h-5 sm:w-5' />
               </button>
             </form>
+
+            <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4'>
+              {features.map((f, i) => (
+                <div key={i} className={bannerStyles.featureItem}>
+                  <div className='text-teal-600 mb-1'>{f.icon}</div>
+                  <span className={bannerStyles.featureText}>{f.text}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right Content */}
+          <div className='relative flex justify-content-center'>
+            <div className={bannerStyles.imageContainer}>
+              <div className={bannerStyles.imageInner}>
+                <img src={BannerFood} alt="Banner" className='object-cover w-full h-full' />
+              </div>
+            </div>
+            <div className="hidden sm:block absolute -top-4 -right-4 w-20 h-20 rounded-full bg-mint-200 opacity-20"></div>
+            <div className="hidden md:block absolute -bottom-4 -left-4 w-28 h-28 rounded-full bg-teal-100 opacity-20"></div>
+            <div className="hidden lg:block absolute top-1/4 -left-6 w-20 h-20 rounded-full bg-seafoam-100 opacity-20"></div>
           </div>
         </div>
       </div>
