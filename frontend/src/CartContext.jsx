@@ -23,7 +23,7 @@ export const CartProvider = ({ children }) => {
   }, [cart]);
 
   // Add an item to cart or increase quantity
-  const addtoCart = (item, quantity = 1) => {
+  const addToCart = (item, quantity = 1) => {
     setCart((prevCart) => {
       // Ensure prevCart is always an array
       const cartArray = Array.isArray(prevCart) ? prevCart : [];
@@ -75,7 +75,7 @@ export const CartProvider = ({ children }) => {
     <CartContext.Provider value={{
       cart,
       cartCount,
-      addtoCart,
+      addToCart,
       removeFromCart,
       updateQuantity,
       clearCart,

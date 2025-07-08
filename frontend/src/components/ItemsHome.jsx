@@ -4,7 +4,7 @@ import BannerHome from './BannerHome'
 import { useNavigate } from 'react-router-dom'
 import { useCart } from '../CartContext'
 import { categories, products } from '../assets/dummyData'
-import { FaChevronRight, FaThList, FaShoppingCart } from 'react-icons/fa'
+import { FaChevronRight, FaThList, FaShoppingCart, FaMinus, FaPlus } from 'react-icons/fa'
 
 const ItemsHome = () => {
   const [activeCategory, setActiveCategory] = useState(() => {
