@@ -1,8 +1,9 @@
 import React from 'react'
 import { footerStyles } from '../assets/dummyStyles'
-import { FaEnvelope, FaFacebookF, FaInstagram, FaLink, FaMapMarkerAlt, FaPhone, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { FaApplePay, FaCcAmex, FaCcMastercard, FaCcPaypal, FaCcVisa, FaEnvelope, FaFacebookF, FaInstagram, FaLink, FaMapMarkerAlt, FaOtter, FaPhone, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { BsTelephone } from 'react-icons/bs';
-import { FiMail } from 'react-icons/fi';
+import { FiBookmark, FiMail } from 'react-icons/fi';
+import { BiMailSend } from 'react-icons/bi';
 
 
 const Footer = () => {
@@ -59,15 +60,15 @@ const Footer = () => {
 
           <div>
             <h3 className={footerStyles.sectionTitle}>
-              <FaLink  className={footerStyles.sectionIcon} />
+              <FaLink className={footerStyles.sectionIcon} />
               Quick Links
             </h3>
             <ul className={footerStyles.linkList}>
-              { ['Home', 'Items', 'Contact'].map((item, idx) => (
+              {['Home', 'Items', 'Contact'].map((item, idx) => (
                 <li key={idx} >
                   <a href={`/${item.toLowerCase()}`} className={footerStyles.linkItem} >
-                   <span className={footerStyles.linkBullet}></span>
-                   {item}
+                    <span className={footerStyles.linkBullet}></span>
+                    {item}
                   </a>
                 </li>
               ))}
@@ -102,7 +103,7 @@ const Footer = () => {
                 </div>
               </li>
 
-                <li className={footerStyles.contactItem}>
+              <li className={footerStyles.contactItem}>
                 <div className={footerStyles.contactIconContainer}>
                   <FaEnvelope className={footerStyles.contactIcon} />
                 </div>
@@ -118,16 +119,65 @@ const Footer = () => {
           {/* Newsletter */}
           <div>
             <h3 className={footerStyles.sectionTitle}>
-              <FiMail  className={footerStyles.sectionIcon} />
+              <FiMail className={footerStyles.sectionIcon} />
               Newsletter
             </h3>
             <p className={footerStyles.newsletterText}>
               Subscribe to our newsletter for the latest updates and offers!
             </p>
-           
+            <div className={footerStyles.newsletterForm}>
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className={footerStyles.newsletterInput}
+              />
+              <button className={footerStyles.newsletterButton}>
+                <BiMailSend className='mr-2 text-lg' />
+                <span>Subscribe</span>
+              </button>
+            </div>
+            <p className={footerStyles.privacyText}>
+              We respect your privacy. Unsubscribe at any time.
+            </p>
+          </div>
+        </div>
+
+        {/* Payment Methods */}
+        <div className={footerStyles.paymentSection}>
+          <h4 className={footerStyles.paymentTitle}>
+            <FiBookmark className={footerStyles.paymentIcon} />
+            We Accept All Major Payment Methods
+          </h4>
+          <div className={footerStyles.paymentMethods}>
+            {[FaCcVisa, FaCcMastercard, FaCcPaypal, FaCcAmex, FaApplePay].map((Icon, idx) => (
+              <div key={idx} className={footerStyles.paymentItem}>
+                <Icon className={footerStyles.paymentIcon} />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/*  HR */}
+        <div className={footerStyles.attribution}>
+          <div className={footerStyles.attributionBadge}>
+            <div className={footerStyles.hexagonContainer}>
+
+              <div className={footerStyles.hexagon}> </div>
+
+              <div className={footerStyles.hexagonInner}>
+                <div className={footerStyles.hexagonInnerShape} />
+              </div>
+            </div>
+            <span className={footerStyles.attributionText}>
+              Designed By {' '}
+              <a href="https://www.example.com" target="_blank" className={footerStyles.attributionLink} >
+                Manish Kumar
+              </a>
+            </span>
           </div>
         </div>
       </div>
+      <style>{footerStyles.customCSS}</style>
     </footer>
   )
 }
