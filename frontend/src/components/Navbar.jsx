@@ -18,7 +18,9 @@ const Navbar = () => {
   const [cartBounce, setCartBounce] = useState(false);
   const prevCartCountRef = useRef(cartCount);
 
-  const [isLoggedIn, setIsLoggedIn] = useState(Boolean(localStorage.getItem('authToken')));
+  const [isLoggedIn, setIsLoggedIn] = useState(
+    Boolean(localStorage.getItem('authToken'))
+  );
 
   const mobileMenuRef = useRef(null);
 
