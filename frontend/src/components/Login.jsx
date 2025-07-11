@@ -11,7 +11,7 @@ const Login = () => {
     Boolean(localStorage.getItem('authToken'))
   );
 
-  const [form, setForm] = useState({
+  const [formData, setFormData] = useState({
     email: '',
     password: '',
     remember: false,
@@ -40,7 +40,7 @@ useEffect(() => {
   //Form handler  
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-    setForm((prev) => ({
+    setFormData((prev) => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : value
     }));
@@ -48,7 +48,7 @@ useEffect(() => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if(!form.remember) {
+    if(!formData.remember) {
       setError('You must agree to the terms and conditions');
       return;
     } 
@@ -57,7 +57,7 @@ useEffect(() => {
     //Generate Token and store user Data
     const token = 'mock_token';
     const userData = {
-      email: form.email, // Fixed variable name
+      email: formData.email, // Fixed variable name
       token,
       timestamp: new Date().toISOString(),
 
@@ -107,7 +107,7 @@ useEffect(() => {
         
             <div className={loginStyles.inputContainer}>
               <FaUser className={loginStyles.inputIcon} />
-              <input type='email' name='email' value={form.email} 
+              <input type='email' name='email' value={formData.email} 
               onChange={handleChange} placeholder='Email Address..'
               required className={loginStyles.input} />
           </div>
@@ -115,7 +115,7 @@ useEffect(() => {
           {/* Password */}
           <div className={loginStyles.inputContainer}>
             <FaLock className={loginStyles.inputIcon} />
-            <input type={showPassword ? 'text' : 'password'} name='password' value={form.password}
+            <input type={showPassword ? 'text' : 'password'} name='password' value={formData.password}
               onChange={handleChange} placeholder='Password..'
               required className={loginStyles.passwordInput} />
             <button type='button' onClick={() => setShowPassword((v) => !v)} className={loginStyles.toggleButton}
@@ -130,7 +130,7 @@ useEffect(() => {
               <input
                 type='checkbox'
                 name='remember'
-                checked={form.remember}
+                checked={formData.remember}
                 onChange={handleChange}
                 className={loginStyles.rememberCheckbox}
                 required
@@ -153,7 +153,7 @@ useEffect(() => {
         <p className={loginStyles.signupText}>
           Don't have an account? 
           <Link to='/signup' className={loginStyles.signupLink}>
-          Sign Up
+            Sign Up
           </Link>
         </p>
       </div>
