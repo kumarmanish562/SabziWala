@@ -108,11 +108,11 @@ const Navbar = () => {
           <Link to="/" className={navbarStyles.logoLink} aria-label="Home">
             <img
               src={logo}
-              alt="SabziWala Logo"
+              alt="SnapBasket Logo"
               className={`${navbarStyles.logoImage} ${scrolled ? 'h-10 w-10' : 'h-12 w-12'
                 }`}
             />
-            <span className={navbarStyles.logoText}>SabziWala</span>
+            <span className={navbarStyles.logoText}>SnapBasket</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -198,8 +198,8 @@ const Navbar = () => {
             <div className={navbarStyles.mobileHeader}>
               <div className={navbarStyles.mobileLogo}>
                 <div className={navbarStyles.mobileLogo}>
-                  <img src={logo} alt="SabziWala Logo" className={navbarStyles.mobileLogoImage} />
-                  <span className={navbarStyles.mobileLogoText}>SabziWala</span>
+                  <img src={logo} alt="SnapBasket Logo" className={navbarStyles.mobileLogoImage} />
+                  <span className={navbarStyles.mobileLogoText}>SnapBasket</span>
                 </div>
               </div>
               <button onClick={() => setIsOpen(false)}

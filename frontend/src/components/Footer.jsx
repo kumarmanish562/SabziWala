@@ -40,7 +40,7 @@ const Footer = () => {
           {/* Brands */}
           <div>
             <h2 className={footerStyles.brandTitle}>
-              Sabzi<span className={footerStyles.brandSpan}>Wala</span>
+              Snap<span className={footerStyles.brandSpan}>Basket</span>
             </h2>
             <p className={footerStyles.brandText}>
               Bringing you the freshest organic produce since 2023. Our mission is to deliver farm-fresh goodness straight to your doorsteps.
@@ -109,7 +109,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <p>
-                    support@sabziwala.com
+                    support@SnapBasket.com
                   </p>
                 </div>
               </li>

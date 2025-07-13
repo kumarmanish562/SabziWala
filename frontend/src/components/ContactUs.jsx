@@ -91,7 +91,8 @@ const handleSubmit = (e) => {
         {/* Contact Area */}
 
         <div className={contactStyles.contactFormContainer}>
-          <div className='absolute inset-0 bg-emerald-900 bg-opacity-90 backdrop-blur-sm z-0'></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-sky-900 via-sky-800 to-sky-950 bg-opacity-90 backdrop-blur-sm z-0"></div>
+
           <form onSubmit={handleSubmit} className={contactStyles.form}>
             <div className={contactStyles.formField}>
             <div className={contactStyles.inputContainer}>
