@@ -14,7 +14,7 @@
 ## 📸 Screenshots
 
 <div align="center">
-  <img src="frontend/src/assets/FoodBanner.png" alt="Food Banner" width="600">
+  <img src="frontend/src/assets/readmeBanner.png" alt="Food Banner" width="600">
   <p><em>Fresh groceries delivered to your doorstep</em></p>
 </div>
 
@@ -148,6 +148,53 @@ The application features over 100 high-quality product images including:
   <img src="frontend/src/assets/Coffee.png" alt="Coffee" width="120">
 </div>
 
+### 🌟 Featured Categories
+
+**🍎 Fresh Fruits & Exotic Varieties**
+<div align="center">
+  <img src="frontend/src/assets/Dragon Fruit.png" alt="Dragon Fruit" width="100">
+  <img src="frontend/src/assets/Kiwi.png" alt="Kiwi" width="100">
+  <img src="frontend/src/assets/Mangosteen.png" alt="Mangosteen" width="100">
+  <img src="frontend/src/assets/Passion Fruit.png" alt="Passion Fruit" width="100">
+  <img src="frontend/src/assets/Star Fruit.png" alt="Star Fruit" width="100">
+</div>
+
+**🧀 Premium Cheeses & Dairy**
+<div align="center">
+  <img src="frontend/src/assets/Aged Gouda.png" alt="Aged Gouda" width="100">
+  <img src="frontend/src/assets/Cave-Aged Gruyère.png" alt="Cave-Aged Gruyère" width="100">
+  <img src="frontend/src/assets/Lavender Goat.png" alt="Lavender Goat Cheese" width="100">
+  <img src="frontend/src/assets/Saffron Manchego.png" alt="Saffron Manchego" width="100">
+  <img src="frontend/src/assets/Smoked Blue.png" alt="Smoked Blue Cheese" width="100">
+</div>
+
+**🍞 Artisan Breads & International Bakes**
+<div align="center">
+  <img src="frontend/src/assets/Ethiopian Injera.png" alt="Ethiopian Injera" width="100">
+  <img src="frontend/src/assets/Indian Naan.png" alt="Indian Naan" width="100">
+  <img src="frontend/src/assets/Japanese Milk Bread.png" alt="Japanese Milk Bread" width="100">
+  <img src="frontend/src/assets/Mexican Concha.png" alt="Mexican Concha" width="100">
+  <img src="frontend/src/assets/Swedish Limpa.png" alt="Swedish Limpa" width="100">
+</div>
+
+**🦞 Premium Seafood & Meats**
+<div align="center">
+  <img src="frontend/src/assets/KingCrab.png" alt="King Crab" width="100">
+  <img src="frontend/src/assets/Oysters.png" alt="Fresh Oysters" width="100">
+  <img src="frontend/src/assets/Duck Breast.png" alt="Duck Breast" width="100">
+  <img src="frontend/src/assets/Lamb Chops.png" alt="Lamb Chops" width="100">
+  <img src="frontend/src/assets/SmokehouseMackerel.png" alt="Smokehouse Mackerel" width="100">
+</div>
+
+**🍫 Gourmet Treats & Confections**
+<div align="center">
+  <img src="frontend/src/assets/Espresso Bean Clusters.png" alt="Espresso Bean Clusters" width="100">
+  <img src="frontend/src/assets/Pistachio Marzipan Logs.png" alt="Pistachio Marzipan" width="100">
+  <img src="frontend/src/assets/Raspberry Rose Bonbons.png" alt="Raspberry Rose Bonbons" width="100">
+  <img src="frontend/src/assets/Salted Caramel Truffles.png" alt="Salted Caramel Truffles" width="100">
+  <img src="frontend/src/assets/Tahini Halva Squares.png" alt="Tahini Halva" width="100">
+</div>
+
 - Fresh fruits and vegetables
 - Dairy products and cheeses
 - Meat and seafood
@@ -162,6 +209,90 @@ The application is fully responsive and works seamlessly across:
 - Tablets
 - Mobile phones
 - Various screen sizes and orientations
+
+## 📞 Contact Section
+
+Our contact page provides multiple ways to reach our customer support team:
+
+<div align="center">
+  <img src="frontend/src/assets/Tea.png" alt="Customer Service" width="150">
+  <p><em>Friendly customer support ready to help</em></p>
+</div>
+
+**Contact Features:**
+- 📧 Contact form for inquiries
+- 📱 Phone support during business hours
+- 🏢 Physical store locations
+- ❓ FAQ section for quick answers
+- 💬 Live chat support
+
+## 🛍️ Items Catalog
+
+Browse through our extensive collection of fresh groceries and specialty items:
+
+<div align="center">
+  <img src="frontend/src/assets/Focaccia.png" alt="Fresh Bread" width="120">
+  <img src="frontend/src/assets/Milk.png" alt="Fresh Milk" width="120">
+  <img src="frontend/src/assets/Lobster.png" alt="Fresh Seafood" width="120">
+  <img src="frontend/src/assets/Grapes.png" alt="Fresh Fruits" width="120">
+  <img src="frontend/src/assets/Spinach.png" alt="Fresh Vegetables" width="120">
+</div>
+
+**Product Categories:**
+- 🍎 **Fresh Produce** - Fruits, vegetables, and herbs
+- 🥛 **Dairy & Eggs** - Milk, cheese, yogurt, and farm-fresh eggs
+- 🥩 **Meat & Seafood** - Premium cuts and fresh catches
+- 🍞 **Bakery** - Fresh bread, pastries, and baked goods
+- 🥫 **Pantry Staples** - Canned goods, grains, and condiments
+- 🍫 **Snacks & Treats** - Chocolates, nuts, and specialty items
+- ☕ **Beverages** - Coffee, tea, juices, and soft drinks
+
+## 🛒 Shopping Cart Experience
+
+Our intuitive cart system makes shopping a breeze:
+
+<div align="center">
+  <img src="frontend/src/assets/IceCream.png" alt="Cart Items" width="150">
+  <img src="frontend/src/assets/Cookies.png" alt="Cart Treats" width="150">
+  <img src="frontend/src/assets/Popcorn.png" alt="Cart Snacks" width="150">
+  <p><em>Easy cart management for all your favorite items</em></p>
+</div>
+
+**Cart Features:**
+- ➕ **Easy Addition** - One-click add to cart from any product
+- 📊 **Quantity Control** - Adjust quantities with simple +/- buttons
+- 🗑️ **Remove Items** - Remove unwanted items instantly
+- 💰 **Live Total** - Real-time price calculation
+- 💾 **Persistent Storage** - Cart contents saved between sessions
+- 🔒 **Secure Checkout** - Protected checkout process
+- 📱 **Mobile Optimized** - Smooth cart experience on all devices
+
+**Cart States:**
+- Empty cart with call-to-action
+- Populated cart with item management
+- Loading states during updates
+- Error handling for failed operations
+
+## 🦶 Footer Information
+
+Our footer provides essential links and company information:
+
+<div align="center">
+  <img src="frontend/src/assets/logo.png" alt="SnapBasket Footer" width="100">
+  <img src="frontend/src/assets/Ghee.png" alt="Quality Products" width="80">
+  <img src="frontend/src/assets/Paneer.png" alt="Fresh Dairy" width="80">
+  <img src="frontend/src/assets/MixedNuts.png" alt="Healthy Snacks" width="80">
+  <p><em>Quality products and customer satisfaction guaranteed</em></p>
+</div>
+
+**Footer Sections:**
+- 🏪 **Company Info** - About us, our mission, and values
+- 🔗 **Quick Links** - Navigation to important pages
+- 📞 **Contact Details** - Phone, email, and address
+- 📱 **Social Media** - Connect with us on social platforms
+- 📜 **Legal** - Privacy policy, terms of service
+- 🏆 **Certifications** - Quality and safety certifications
+- 📧 **Newsletter** - Subscribe for deals and updates
 
 ## 🤝 Contributing
 
