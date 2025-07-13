@@ -215,7 +215,7 @@ The application is fully responsive and works seamlessly across:
 Our contact page provides multiple ways to reach our customer support team:
 
 <div align="center">
-  <img src="frontend/src/assets/Tea.png" alt="Customer Service" width="150">
+  <img src="frontend/src/assets/readmeContact.png" alt="Customer Service" width="150">
   <p><em>Friendly customer support ready to help</em></p>
 </div>
 
@@ -231,11 +231,7 @@ Our contact page provides multiple ways to reach our customer support team:
 Browse through our extensive collection of fresh groceries and specialty items:
 
 <div align="center">
-  <img src="frontend/src/assets/Focaccia.png" alt="Fresh Bread" width="120">
-  <img src="frontend/src/assets/Milk.png" alt="Fresh Milk" width="120">
-  <img src="frontend/src/assets/Lobster.png" alt="Fresh Seafood" width="120">
-  <img src="frontend/src/assets/Grapes.png" alt="Fresh Fruits" width="120">
-  <img src="frontend/src/assets/Spinach.png" alt="Fresh Vegetables" width="120">
+  <img src="frontend/src/assets/readmeItems.png" alt="Fresh Bread" width="120">
 </div>
 
 **Product Categories:**
@@ -252,9 +248,8 @@ Browse through our extensive collection of fresh groceries and specialty items:
 Our intuitive cart system makes shopping a breeze:
 
 <div align="center">
-  <img src="frontend/src/assets/IceCream.png" alt="Cart Items" width="150">
-  <img src="frontend/src/assets/Cookies.png" alt="Cart Treats" width="150">
-  <img src="frontend/src/assets/Popcorn.png" alt="Cart Snacks" width="150">
+  <img src="frontend/src/assets/readmeCart.png" alt="Cart Items" width="150">
+  
   <p><em>Easy cart management for all your favorite items</em></p>
 </div>
 
@@ -278,10 +273,7 @@ Our intuitive cart system makes shopping a breeze:
 Our footer provides essential links and company information:
 
 <div align="center">
-  <img src="frontend/src/assets/logo.png" alt="SnapBasket Footer" width="100">
-  <img src="frontend/src/assets/Ghee.png" alt="Quality Products" width="80">
-  <img src="frontend/src/assets/Paneer.png" alt="Fresh Dairy" width="80">
-  <img src="frontend/src/assets/MixedNuts.png" alt="Healthy Snacks" width="80">
+  <img src="frontend/src/assets/readmeFooter.png" alt="SnapBasket Footer" width="100">
   <p><em>Quality products and customer satisfaction guaranteed</em></p>
 </div>
 
