@@ -13,7 +13,7 @@ import { groceryData } from '../assets/dummyDataItem';
 const ProductCard = ({ item }) => {
   const { cart, addToCart, removeFromCart, updateQuantity } = useCart();
   // Get Current Qty of the Product
-  const cartItem = cart.find(cartItem => cartItem._id === item._id);
+  const cartItem = cart.find(cartItem => cartItem.id === item.id);
   const quantity = cartItem ? cartItem.quantity : 0;
 
   //Add to Cart Handler
@@ -33,7 +33,8 @@ const ProductCard = ({ item }) => {
   const handleDecrement = () => {
     if (quantity === 1) {
       removeFromCart(item.id);
-    } else {
+    } else if (quantity > 1) 
+      {
       updateQuantity(item.id, quantity - 1);
     }
   };
@@ -57,13 +58,14 @@ const ProductCard = ({ item }) => {
           {item.description || `Fresh organic ${item.name.toLowerCase()} sourced locally.`}
         </p>
         <div className={itemsPageStyles.priceContainer}>
-          <span className={itemsPageStyles.currentPricePrice}>
+          <span className={itemsPageStyles.currentPrice}>
             ₹{item.price.toFixed(2)}
           </span>
           <span className={itemsPageStyles.oldPrice}>
             ₹{(item.price * 1.15).toFixed(2)}
           </span>
         </div>
+
 
         <div className=' mt-3 '>
           {quantity > 0 ? (
@@ -101,9 +103,9 @@ const Item = () => {
   //Search query from url 
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search);
-    const query = queryParams.get('search')
-    if (query) {
-      setSearchTerm(query);
+    const search = queryParams.get('search')
+    if (search) {
+      setSearchTerm(search);
     }
   }, [location]);
 
@@ -144,11 +146,11 @@ const Item = () => {
     if (allExpanded) {
       setExpandedCategories({});
     } else {
-      const expand = {};
+      const expanded = {};
       groceryData.forEach(category => {
-        expand[category.id] = true;
+        expanded[category.id] = true;
       });
-      setExpandedCategories(expand);
+      setExpandedCategories(expanded);
     }
     setAllExpanded(!allExpanded);
   };
@@ -222,12 +224,12 @@ const Item = () => {
 
                 <div className={itemsPageStyles.productsGrid}>
                   {visibleItems.map(item => (
-                    <ProductCard key={item._id} item={item} />
+                    <ProductCard key={item.id} item={item} />
                   ))}
                 </div>
 
                 {hasMoreItems && (
-                  <div className='mr-8 flex justify-center'>
+                  <div className='mt-8 flex justify-center'>
                     <button onClick={() => toggleCategory(category.id)} className={itemsPageStyles.showMoreButton}>
                       <span className='mr-2 font-medium'>
                         {isExpanded ? `Show Less ${category.name}` : `Show More ${category.name} (${category.items.length - 4} + )`}
