@@ -215,7 +215,7 @@ The application is fully responsive and works seamlessly across:
 Our contact page provides multiple ways to reach our customer support team:
 
 <div align="center">
-  <img src="frontend/src/assets/readmeContact.png" alt="Customer Service" width="150">
+  <img src="frontend/src/assets/readmeContact.png" alt="Customer Service" width="600">
   <p><em>Friendly customer support ready to help</em></p>
 </div>
 
@@ -231,7 +231,7 @@ Our contact page provides multiple ways to reach our customer support team:
 Browse through our extensive collection of fresh groceries and specialty items:
 
 <div align="center">
-  <img src="frontend/src/assets/readmeItems.png" alt="Fresh Bread" width="120">
+  <img src="frontend/src/assets/readmeItems.png" alt="Fresh Bread" width="600">
 </div>
 
 **Product Categories:**
@@ -248,7 +248,7 @@ Browse through our extensive collection of fresh groceries and specialty items:
 Our intuitive cart system makes shopping a breeze:
 
 <div align="center">
-  <img src="frontend/src/assets/readmeCart.png" alt="Cart Items" width="150">
+  <img src="frontend/src/assets/readmeCart.png" alt="Cart Items" width="600">
   
   <p><em>Easy cart management for all your favorite items</em></p>
 </div>
@@ -273,7 +273,7 @@ Our intuitive cart system makes shopping a breeze:
 Our footer provides essential links and company information:
 
 <div align="center">
-  <img src="frontend/src/assets/readmeFooter.png" alt="SnapBasket Footer" width="100">
+  <img src="frontend/src/assets/readmeFooter.png" alt="SnapBasket Footer" width="600">
   <p><em>Quality products and customer satisfaction guaranteed</em></p>
 </div>
 
