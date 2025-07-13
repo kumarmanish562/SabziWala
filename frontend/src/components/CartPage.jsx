@@ -147,8 +147,8 @@ const CartPage = () => {
               <button className={cartStyles.checkoutButton}>
                 Proceed to Checkout
               </button>
-              <div className={cartStyles.continueShoppingContainer}>
-                <Link href="/" className={cartStyles.continueShopping}>
+              <div className={cartStyles.continueShoppingBottom}>
+                <Link to="/items" className={cartStyles.continueShopping}>
                 <FiArrowLeft className='mr-1 ' />
                   Continue Shopping
                 </Link>
